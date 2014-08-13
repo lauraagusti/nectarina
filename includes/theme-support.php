@@ -10,6 +10,7 @@
 /* Basic Theme supports */
 
 if ( function_exists( 'add_theme_support' ) ) {
+	add_theme_support( 'menus' );
 	add_theme_support( 'automatic-feed-links' ); // Add Feed Links Support
 	add_theme_support( 'post-formats', array('standard','image','gallery','video')); // Add Post Formats Support
 	add_theme_support( 'woocommerce' ); // Add Woocommerce Theme Support

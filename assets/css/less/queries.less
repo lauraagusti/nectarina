@@ -1,0 +1,30 @@
+/* Media Queries */
+
+.col {
+	margin: 10px 0;
+}
+
+@media screen and (min-width: 1201px) {
+	@wrapper: 1160px;
+	@padding: 10px;	
+	@import "grids.less";
+}
+
+@media screen and (min-width: 961px) and (max-width: 1200px) {
+	@wrapper: 920px;
+	@padding: 10px;	
+	@import "grids.less";
+}
+
+@media screen and (min-width: 769px) and (max-width: 960px) {
+	@wrapper: 720px;
+	@padding: 10px;	
+	@import "grids.less";
+}
+
+@media screen and (max-width: 768px) {	
+	.wrapper, .col.one, .col.three-fourth, .col.two-third, .col.one-second, .col.one-third, .col.one-fourth  {
+		width: 90%;
+		padding: 5%;
+	}	
+}

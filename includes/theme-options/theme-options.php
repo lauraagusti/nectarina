@@ -5,6 +5,7 @@
  * @package Nectarina
  * @author Mildthemes
  * @link http://mildthemes.com
+ * @version 0.0.1
  */
 
 /* Basic Theme supports */

@@ -1,0 +1,84 @@
+body {
+	margin: 0;
+	padding: 0;
+}
+
+#body {
+	z-index:999;
+	position: relative;
+}
+
+#body-background-overlay {
+	top: 0;
+	left: 0;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	padding: 0;
+	margin: 0;
+	z-index: 9;
+}
+
+header {
+	width: 100%;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+header .wrapper, #action-bar .wrapper {
+	padding: 0 20px;
+}
+
+#logo {
+	background-repeat: no-repeat;
+	background-size: 200px auto;
+	background-position: center center;
+	width: 200px;
+	height: 200px;
+}
+
+#action-bar {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	background-color: black;
+	color: white;
+}
+
+/* Media Queries */
+
+.col {
+	margin: 10px 0;
+}
+
+@media screen and (min-width: 1201px) {
+	@wrapper: 1160px;
+	@padding: 10px;	
+	@import "grids.less";
+}
+
+@media screen and (min-width: 961px) and (max-width: 1200px) {
+	@wrapper: 920px;
+	@padding: 10px;	
+	@import "grids.less";
+}
+
+@media screen and (min-width: 769px) and (max-width: 960px) {
+	@wrapper: 720px;
+	@padding: 10px;	
+	@import "grids.less";
+}
+
+@media screen and (max-width: 768px) {	
+	.wrapper, .col.one, .col.three-fourth, .col.two-third, .col.one-second, .col.one-third, .col.one-fourth  {
+		width: 90%;
+		padding: 5%;
+	}	
+}

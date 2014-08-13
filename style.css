@@ -1,11 +1,13 @@
 /*
 Theme Name: Nectarina
 Theme URI: http://mildthemes.com/
-Author: Laura Agustí i Jordi Sánchez
+Author: Laura Agustí & Jordi Sánchez
 Author URI: http://mildthemes.com/
 Description: Nectarina is a powerful theme. Is Responsive, Retina Ready and fully customizable.
-Version: 0.1
+Version: 0.0.1
 License: GNU General Public License
 Tags: retina, responsive, customizable, page builder, infinite possibilities.
 This theme, like WordPress, is licensed under the GPL.
 */
+
+@import url("assets/css/base.css");
