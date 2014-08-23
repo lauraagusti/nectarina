@@ -22,7 +22,9 @@ define( 'LANG_DIR', THEME_DIR. '/languages' );
 
 require_once( LIBS_DIR .'/theme-support.php' );
 require_once( LIBS_DIR .'/customizer/customizer.php' );
+require_once( LIBS_DIR .'/shortcodes/shortcodes.php' );
 require_once( LIBS_DIR .'/widgets.php' );
+
 
 /* Register Menus */
 function register_my_menus() {
@@ -51,9 +53,9 @@ function mildthemes_hextorgb($hex, $opacity = "100") {
    }
 
 	if ($opacity == "") {
-		echo 'rgb(' . $r . ',' . $g . ',' . $b . ')';
+		return 'rgb(' . $r . ',' . $g . ',' . $b . ')';
 	} else {
-		echo 'rgba(' . $r . ',' . $g . ',' . $b . ',' . $opacity / 100 . ')';
+		return 'rgba(' . $r . ',' . $g . ',' . $b . ',' . $opacity / 100 . ')';
 	}
 }
  

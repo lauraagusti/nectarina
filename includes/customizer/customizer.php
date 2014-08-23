@@ -27,16 +27,12 @@ function mildthemes_register_theme_customizer( $wp_customize ) {
 
 /* Changing CSS */
 
+
 function mildthemes_customizer_css() {
 ?>
-
 	<style type="text/css">
 	 
-	 <?php
-	  
-	 require_once( LIBS_DIR .'/customizer/customizer-css.php' );
-	 
-	 ?>
+	 <?php require_once( LIBS_DIR .'/customizer/customizer-css.php' ); ?>
 	    
 	</style>
 	 

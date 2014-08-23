@@ -1,0 +1,206 @@
+body {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;	
+	line-height: 1.7;
+}
+
+.bgoverlay {
+	top: 0;
+	left: 0;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	padding: 0;
+	margin: 0;
+	z-index: 9;
+}
+
+header {
+	width: 100%;
+}
+
+header .wrapper, #action-bar .wrapper {
+	padding: 0 20px;
+}
+
+header .col {
+	margin: 0;
+}
+
+#header {
+	 min-height: 600px;
+	 height: 100vh;
+}
+
+#logo {
+	background-repeat: no-repeat;
+	background-size: 200px auto;
+	background-position: center center;
+	width: 200px;
+	height: 200px;
+	margin: 10px 0;
+	background-position-x: left;
+}
+
+#action-bar {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	background-color: black;
+	color: white;
+}
+
+h1 {
+	font-size: 56px;
+	font-weight: 100;
+	text-align: center;
+	padding: 50px 0 0;
+	margin: 0;
+	color: white;
+}
+
+h2 {
+	font-size: 20px;
+	font-weight: 100;
+	text-align: center;
+	color: white;
+}
+
+.header-menu ul {
+	padding-left: 0;
+	padding-top: 5px;
+}
+
+.header-menu ul li {
+	font-size: 14px;
+	display: inline-block;
+	list-style-type: none;
+}
+
+.header-menu ul li a {
+	text-decoration: none;
+	color: white;
+	padding: 8px 14px;
+	border-radius: 4px;
+}
+
+.header-menu ul li a:hover {
+	background-color: gray;
+}
+
+.clear {
+	clear: both;
+}
+
+.alignleft {
+	text-align: left;
+}
+
+.alignright {
+	text-align: right;
+}
+
+.aligncenter {
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+button.modern {
+	background-color: transparent;
+	color: white;
+	padding: 12px 20px;
+	border-radius: 3px;
+	border: 2px solid white;
+	text-align: center;
+	font-size: 15px;
+	text-transform: uppercase;
+}
+
+.searchbox {
+	margin: 20px 0;
+}
+
+.searchbox input {
+	border: 1px solid white;
+	border-radius: 15px;
+	color: white;
+	background-color: transparent;
+	padding: 8px 40px 8px 10px;
+	font-size: 13px;
+	width: 100%;
+	background-image: url('../images/search-white.png');
+	background-size: 16px auto;
+	background-position: 95% center;
+	background-repeat: no-repeat;
+	opacity: 0.6;
+}
+
+/* Section styles */
+
+section {
+	position: relative;
+	overflow: hidden;
+	clear: both;
+}
+
+/* Fullwidth wrapper */
+
+section .wrapper.fullwidth {
+	width: 100%;
+	padding: 0 0 !important;
+}
+
+/* Section with Background Image */
+
+section.image {
+	background-size: cover;
+}
+
+/* Section with Background Video */
+
+section.video video {
+	position: absolute;
+	min-width: 100%; 
+	min-height: 100%;
+	width: auto; 
+	height: auto;
+	right: 0; 
+	bottom: 0;
+}
+
+/* Media Queries */
+
+@media screen and (min-width: 1201px) {
+	@wrapper: 1160px;
+	@padding: 1%;	
+	@import "grids.less";
+}
+
+@media screen and (min-width: 961px) and (max-width: 1200px) {
+	@wrapper: 920px;
+	@padding: 1.5%;	
+	@import "grids.less";
+}
+
+@media screen and (min-width: 769px) and (max-width: 960px) {
+	@wrapper: 720px;
+	@padding: 2%;	
+	@import "grids.less";
+}
+
+@media screen and (max-width: 768px) {	
+	.wrapper, .col.one, .col.three-fourth, .col.two-third, .col.one-second, .col.one-third, .col.one-fourth, .col.one-sixth, .col.five-sixth, .col.one-fifth  {
+		width: 90%;
+		padding: 10px 5%;
+		position: relative;
+		z-index:99;
+	}	
+}

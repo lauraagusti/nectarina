@@ -19,9 +19,6 @@
 			<!-- WordPress Bar -->
 			<?php wp_footer(); ?>
 	
-		</div>
-		<!-- Ends #Body -->
-	
 	</body>
 
 </html>

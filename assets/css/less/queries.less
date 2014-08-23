@@ -1,30 +1,52 @@
 /* Media Queries */
 
-.col {
-	margin: 10px 0;
+@min-desktop-screen: @desktop-screen + 1;
+@min-tablet-screen: @tablet-screen + 1;
+@min-mobile-screen: @mobile-screen + 1;
+
+.mixin-wrapper {
+	padding: 0 @screen-padding;
+	margin: 0 auto;
+	z-index: 99;
+    position: relative;
+    text-align: center;
 }
 
-@media screen and (min-width: 1201px) {
-	@wrapper: 1160px;
-	@padding: 10px;	
-	@import "grids.less";
+@media screen and (min-width: @min-desktop-screen) {
+	
+	.wrapper {
+		width: @desktop-screen - (@screen-padding * 2);
+		.mixin-wrapper;
+	}
+	
 }
 
-@media screen and (min-width: 961px) and (max-width: 1200px) {
-	@wrapper: 920px;
-	@padding: 10px;	
-	@import "grids.less";
+@media screen and (min-width: @min-tablet-screen) and (max-width: @desktop-screen) {
+	
+	.wrapper {
+		width: @tablet-screen - (@screen-padding * 2);
+		.mixin-wrapper;
+	}
+	
 }
 
-@media screen and (min-width: 769px) and (max-width: 960px) {
-	@wrapper: 720px;
-	@padding: 10px;	
-	@import "grids.less";
+@media screen and (min-width: @min-mobile-screen) and (max-width: @tablet-screen) {
+	
+	.wrapper {
+		width: @mobile-screen - (@screen-padding * 2);
+		.mixin-wrapper;
+	}
+	
 }
 
-@media screen and (max-width: 768px) {	
-	.wrapper, .col.one, .col.three-fourth, .col.two-third, .col.one-second, .col.one-third, .col.one-fourth  {
-		width: 90%;
-		padding: 5%;
-	}	
+
+@media screen and (max-width: @mobile-screen ) {
+	
+	.wrapper, .wrapper .col.one, .wrapper .col.three-fourth, .wrapper .col.two-third, .wrapper .col.one-second, .wrapper .col.one-third, .wrapper .col.one-fourth, .wrapper .col.one-sixth, .wrapper .col.five-sixth, .wrapper .col.one-fifth, .wrapper.fluid .col.one, .wrapper.fluid .col.three-fourth, .wrapper.fluid .col.two-third, .wrapper.fluid .col.one-second, .wrapper.fluid .col.one-third, .wrapper.fluid .col.one-fourth, .wrapper.fluid .col.one-sixth, .wrapper.fluid .col.five-sixth, .wrapper.fluid .col.one-fifth {
+		width: 100% - (@fluid-padding * 2);
+		padding: 0 @fluid-padding;
+		position: relative;
+		z-index: 9999;
+	}
+	
 }

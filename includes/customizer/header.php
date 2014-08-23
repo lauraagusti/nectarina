@@ -54,6 +54,35 @@
 			)
 		);
 
+
+		//Header styles
+		$wp_customize->add_setting(
+			'mildthemes_header_styles',
+			array(
+				'default'     => 'normal'
+			)
+		);
+	
+		$wp_customize->add_control(
+			new WP_Customize_Control(
+				$wp_customize,
+				'header_styles',
+				array(
+				    'label'      => __( 'Header Style', 'mildthemes' ),
+				    'section'    => 'mildthemes_header_section',
+				    'settings'   => 'mildthemes_header_styles',
+				    'type'       => 'select',
+				    'priority'   => 2,
+				    'choices'    => array(
+				    					'normal' => 'Normal',
+										'logo-centered'  => 'Logo Centered',
+										'search' => 'With search box',
+										'hidden' => 'Hidden',
+									),
+				)
+			)
+		);
+
 		//Background Color
 		$wp_customize->add_setting(
 			'mildthemes_header_bg',
@@ -136,28 +165,6 @@
 				    'settings'   => 'mildthemes_header_overlay',
 				    'type'       => 'text',
 				    'priority'   => 5,
-				)
-			)
-		);
-
-		//Header Padding
-		$wp_customize->add_setting(
-			'mildthemes_header_padding',
-			array(
-				'default'     => '10px'
-			)
-		);
-	
-		$wp_customize->add_control(
-			new WP_Customize_Control(
-				$wp_customize,
-				'header_padding',
-				array(
-				    'label'      => __( 'Padding', 'mildthemes' ),
-				    'section'    => 'mildthemes_header_section',
-				    'settings'   => 'mildthemes_header_padding',
-				    'type'       => 'text',
-				    'priority'   => 8,
 				)
 			)
 		);

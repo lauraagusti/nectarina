@@ -4,7 +4,6 @@ body {
 	font-size: <?php echo get_theme_mod( 'mildthemes_typography_text_size' ); ?>;
 	font-family: 'Open Sans', sans-serif;
 	font-weight: 300;
-	line-height: 1.7;
 	background: url("<?php echo get_theme_mod( 'mildthemes_body_bg_image' ); ?>") center center fixed;
 	<?php if(get_theme_mod( 'mildthemes_body_bg_image_repeat' ) == 'repeat') { ?>
 	background-repeat: repeat;
@@ -70,8 +69,6 @@ header {
 	margin-top: <?php echo get_theme_mod( 'mildthemes_action_bar_height' ); ?>;
 	<?php } ?>
 	background-color: <?php echo mildthemes_hextorgb(get_theme_mod( 'mildthemes_header_bg' ), get_theme_mod( 'mildthemes_header_overlay' )); ?>; 
-	padding-top: <?php echo get_theme_mod( 'mildthemes_header_padding' ); ?>; 
-	padding-bottom: <?php echo get_theme_mod( 'mildthemes_header_padding' ); ?>; 
 	border-bottom: 1px solid <?php echo mildthemes_hextorgb(get_theme_mod( 'mildthemes_header_border_color' ), get_theme_mod( 'mildthemes_header_border_overlay' )); ?>;
 	<?php if( get_theme_mod( 'mildthemes_header_position' ) == 'fixed') { ?>
 	position: fixed;

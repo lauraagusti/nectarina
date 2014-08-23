@@ -1,0 +1,329 @@
+/* Reset CSS */
+/* Reset CSS */
+html,
+body {
+  border: 0;
+  font-family: "Helvetica-Neue", "Helvetica", Arial, sans-serif;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+}
+div,
+span,
+object,
+iframe,
+img,
+table,
+caption,
+thead,
+tbody,
+tfoot,
+tr,
+tr,
+td,
+article,
+aside,
+canvas,
+details,
+figure,
+hgroup,
+menu,
+nav,
+footer,
+header,
+section,
+summary,
+mark,
+audio,
+video {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+address,
+cit,
+code,
+del,
+dfn,
+em,
+ins,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+b,
+i,
+hr,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+legend,
+label {
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  margin: 0;
+  padding: 0;
+}
+article,
+aside,
+canvas,
+figure,
+figure img,
+figcaption,
+hgroup,
+footer,
+header,
+nav,
+section,
+audio,
+video {
+  display: block;
+}
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+}
+table caption,
+table th,
+table td {
+  text-align: left;
+  vertical-align: middle;
+}
+a img {
+  border: 0;
+}
+:focus {
+  outline: 0;
+}
+/* Grids */
+/* 1/6 */
+.col.one-sixth {
+  width: 11.666666666666668%;
+}
+.wrapper.fluid .col.one-sixth {
+  width: 12.666666666666668%;
+}
+/* 1/5 */
+.col.one-fifth {
+  width: 15%;
+}
+.wrapper.fluid .col.one-fifth {
+  width: 16%;
+}
+/* 1/4 */
+.col.one-fourth {
+  width: 20%;
+}
+.wrapper.fluid .col.one-fourth {
+  width: 21%;
+}
+/* 1/3 */
+.col.one-third {
+  width: 28.333333333333336%;
+}
+.wrapper.fluid .col.one-third {
+  width: 29.333333333333336%;
+}
+/* 1/2 */
+.col.one-second {
+  width: 45%;
+}
+.wrapper.fluid .col.one-second {
+  width: 46%;
+}
+/* 1/1 */
+.col.one {
+  width: 96%;
+}
+.wrapper.fluid .col.one {
+  width: 96%;
+}
+/* 2/3 */
+.col.two-third {
+  width: 61.66666666666667%;
+}
+.wrapper.fluid .col.two-third {
+  width: 62.66666666666667%;
+}
+/* 3/4 */
+.col.three-fourth {
+  width: 70%;
+}
+.wrapper.fluid .col.three-fourth {
+  width: 71%;
+}
+/* 5/6 */
+.col.five-sixth {
+  width: 78.33333333333334%;
+}
+.wrapper.fluid .col.five-sixth {
+  width: 79.33333333333334%;
+}
+/* Media Queries */
+.mixin-wrapper {
+  padding: 0 20px;
+  margin: 0 auto;
+  z-index: 99;
+  position: relative;
+  text-align: center;
+}
+@media screen and (min-width: 1201px) {
+  .wrapper {
+    width: 1160px;
+    padding: 0 20px;
+    margin: 0 auto;
+    z-index: 99;
+    position: relative;
+    text-align: center;
+  }
+}
+@media screen and (min-width: 961px) and (max-width: 1200px) {
+  .wrapper {
+    width: 920px;
+    padding: 0 20px;
+    margin: 0 auto;
+    z-index: 99;
+    position: relative;
+    text-align: center;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 960px) {
+  .wrapper {
+    width: 728px;
+    padding: 0 20px;
+    margin: 0 auto;
+    z-index: 99;
+    position: relative;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 768px) {
+  .wrapper,
+  .wrapper .col.one,
+  .wrapper .col.three-fourth,
+  .wrapper .col.two-third,
+  .wrapper .col.one-second,
+  .wrapper .col.one-third,
+  .wrapper .col.one-fourth,
+  .wrapper .col.one-sixth,
+  .wrapper .col.five-sixth,
+  .wrapper .col.one-fifth,
+  .wrapper.fluid .col.one,
+  .wrapper.fluid .col.three-fourth,
+  .wrapper.fluid .col.two-third,
+  .wrapper.fluid .col.one-second,
+  .wrapper.fluid .col.one-third,
+  .wrapper.fluid .col.one-fourth,
+  .wrapper.fluid .col.one-sixth,
+  .wrapper.fluid .col.five-sixth,
+  .wrapper.fluid .col.one-fifth {
+    width: 96%;
+    padding: 0 2%;
+    position: relative;
+    z-index: 9999;
+  }
+}
+body {
+  color: #ffffff;
+}
+/* Wrapper and Cols */
+.wrapper.fluid {
+  width: 100%;
+  padding: 0px;
+}
+.wrapper.wrapped .col,
+.wrapper .col {
+  padding: 0 2%;
+  display: inline-block;
+  vertical-align: top;
+}
+.wrapper.fluid .col {
+  padding: 0 2%;
+  float: left;
+}
+.col {
+  text-align: left;
+}
+/* Section */
+section {
+  height: auto;
+  clear: both;
+  position: relative;
+  overflow: hidden;
+}
+section.image,
+section.video {
+  background-size: cover;
+}
+section.video video {
+  position: absolute;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  right: 0;
+  bottom: 0;
+}
+.bgoverlay {
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  z-index: 9;
+}
+/* General Classes */
+.clear {
+  clear: both;
+}
+.alignleft {
+  text-align: left;
+}
+.alignright {
+  text-align: right;
+}
+.aligncenter {
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+}
+/* Header */
+/* Search styles */
+.searchbox {
+  margin: 20px 0;
+}
+.searchbox input {
+  border: 1px solid white;
+  border-radius: 15px;
+  color: white;
+  background-color: transparent;
+  padding: 8px 40px 8px 10px;
+  font-size: 13px;
+  width: 100%;
+  background-image: url('../images/search-white.png');
+  background-size: 16px auto;
+  background-position: 95% center;
+  background-repeat: no-repeat;
+  opacity: 0.6;
+}
+/* Menus */

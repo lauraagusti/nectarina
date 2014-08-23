@@ -1,0 +1,59 @@
+body {
+	color: @body-text-color;
+}
+
+/* Wrapper and Cols */
+
+.wrapper.fluid {
+	width: 100%;
+	padding: 0px;
+}
+
+.wrapper.wrapped .col, .wrapper .col {
+	padding: 0 @grids-padding;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.wrapper.fluid .col {
+	padding: 0 @grids-padding;
+	float:left;
+}
+
+.col {
+	text-align: @col-text-align;
+}
+
+/* Section */
+
+section {
+	height: auto;
+	clear: both;
+	position: relative;
+	overflow: hidden;
+}
+
+section.image, section.video {
+	background-size: cover;
+}
+
+section.video video {
+	position: absolute;
+	min-width: 100%; 
+	min-height: 100%;
+	width: auto; 
+	height: auto;
+	right: 0; 
+	bottom: 0;
+}
+
+.bgoverlay {
+	top: 0;
+	left: 0;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	padding: 0;
+	margin: 0;
+	z-index: 9;
+}
