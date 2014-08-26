@@ -1,7 +1,7 @@
 /* Grids */
 
 .columns(@cols, @grids) {
-	width: (100% / @cols) * @grids - 1 - (@grids-padding * 2);
+	width: (100% / @cols) * @grids - (@grids-padding * 2) - (@grids-margin * 2);
 }
 
 .columns-fluid(@cols, @grids) {
@@ -55,7 +55,7 @@
 
 /* 1/1 */
 .col.one {
-	.columns-fluid(1, 1);
+	.columns(1, 1);
 }
 
 .wrapper.fluid .col.one {

@@ -25,15 +25,11 @@ function mildthemes_register_theme_customizer( $wp_customize ) {
 	
 } add_action( 'customize_register', 'mildthemes_register_theme_customizer' );
 
-/* Changing CSS */
 
+function mildthemes_enqueue_custom_css() {
 
-function mildthemes_customizer_css() {
+	wp_enqueue_style( 'customizer_css', LIBS_URI .'/customizer/customizer-css.php', false, '0.0.1');
+	
+}
+add_action( 'wp_enqueue_scripts', 'mildthemes_enqueue_custom_css' );
 ?>
-	<style type="text/css">
-	 
-	 <?php require_once( LIBS_DIR .'/customizer/customizer-css.php' ); ?>
-	    
-	</style>
-	 
-<?php } add_action( 'wp_head', 'mildthemes_customizer_css');  ?>

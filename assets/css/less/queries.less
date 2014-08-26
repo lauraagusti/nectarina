@@ -9,7 +9,6 @@
 	margin: 0 auto;
 	z-index: 99;
     position: relative;
-    text-align: center;
 }
 
 @media screen and (min-width: @min-desktop-screen) {
@@ -42,11 +41,15 @@
 
 @media screen and (max-width: @mobile-screen ) {
 	
-	.wrapper, .wrapper .col.one, .wrapper .col.three-fourth, .wrapper .col.two-third, .wrapper .col.one-second, .wrapper .col.one-third, .wrapper .col.one-fourth, .wrapper .col.one-sixth, .wrapper .col.five-sixth, .wrapper .col.one-fifth, .wrapper.fluid .col.one, .wrapper.fluid .col.three-fourth, .wrapper.fluid .col.two-third, .wrapper.fluid .col.one-second, .wrapper.fluid .col.one-third, .wrapper.fluid .col.one-fourth, .wrapper.fluid .col.one-sixth, .wrapper.fluid .col.five-sixth, .wrapper.fluid .col.one-fifth {
+	.wrapper {
+		padding: 0;
+	}
+	
+	.wrapper .col.one, .wrapper .col.three-fourth, .wrapper .col.two-third, .wrapper .col.one-second, .wrapper .col.one-third, .wrapper .col.one-fourth, .wrapper .col.one-sixth, .wrapper .col.five-sixth, .wrapper .col.one-fifth, .wrapper.fluid .col.one, .wrapper.fluid .col.three-fourth, .wrapper.fluid .col.two-third, .wrapper.fluid .col.one-second, .wrapper.fluid .col.one-third, .wrapper.fluid .col.one-fourth, .wrapper.fluid .col.one-sixth, .wrapper.fluid .col.five-sixth, .wrapper.fluid .col.one-fifth {
 		width: 100% - (@fluid-padding * 2);
 		padding: 0 @fluid-padding;
 		position: relative;
-		z-index: 9999;
+		z-index: 99;
 	}
 	
 }

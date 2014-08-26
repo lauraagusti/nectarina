@@ -18,13 +18,18 @@ define( 'LIBS_DIR', THEME_DIR. '/includes' );
 define( 'LIBS_URI', THEME_URI. '/includes' );
 define( 'LANG_DIR', THEME_DIR. '/languages' );
 
-/* Loads Theme Functions */
 
+/* Loads Theme Functions */
 require_once( LIBS_DIR .'/theme-support.php' );
 require_once( LIBS_DIR .'/customizer/customizer.php' );
 require_once( LIBS_DIR .'/shortcodes/shortcodes.php' );
 require_once( LIBS_DIR .'/widgets.php' );
 
+/* Enqueue Scripts */
+function mildthemes_enqueue_scripts() {
+	wp_enqueue_script( 'responsive_slider', THEME_URI .'/assets/js/responsiveslides.js', false, '1.5.4');
+}
+add_action( 'wp_enqueue_scripts', 'mildthemes_enqueue_scripts' );
 
 /* Register Menus */
 function register_my_menus() {
@@ -38,7 +43,6 @@ function register_my_menus() {
 add_action( 'init', 'register_my_menus' );
 
 /* Hexadecimal to RGBA */
-
 function mildthemes_hextorgb($hex, $opacity = "100") {
    $hex = str_replace("#", "", $hex);
 

@@ -1,10 +1,19 @@
+<?php 
+header( 'Content-type: text/css;' );
+require_once(substr( dirname( __FILE__ ), 0, strpos(dirname( __FILE__ ), 'wp-content' )) . 'wp-load.php');
+?>
+
 /* Body */
 body { 
-	color: <?php echo get_theme_mod( 'mildthemes_typography_text_color' ); ?>;
+	color: <?php echo get_theme_mod( 'mildthemes_typography_text_color'); ?>;
 	font-size: <?php echo get_theme_mod( 'mildthemes_typography_text_size' ); ?>;
 	font-family: 'Open Sans', sans-serif;
 	font-weight: 300;
-	background: url("<?php echo get_theme_mod( 'mildthemes_body_bg_image' ); ?>") center center fixed;
+	<?php
+	if (get_theme_mod( 'mildthemes_body_bg_image' )) {
+	?>
+		background: url("<?php echo get_theme_mod( 'mildthemes_body_bg_image' ); ?>") center center fixed;
+	<?php } ?>
 	<?php if(get_theme_mod( 'mildthemes_body_bg_image_repeat' ) == 'repeat') { ?>
 	background-repeat: repeat;
 	<?php } else if(get_theme_mod( 'mildthemes_body_bg_image_repeat' ) == 'repeat_x') { ?>

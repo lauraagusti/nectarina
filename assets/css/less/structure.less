@@ -4,24 +4,31 @@ body {
 
 /* Wrapper and Cols */
 
+.wrapper img {
+	width: 100%;
+	height: auto;
+}
+
 .wrapper.fluid {
 	width: 100%;
-	padding: 0px;
+	padding: 0 @grids-padding;
 }
 
 .wrapper.wrapped .col, .wrapper .col {
 	padding: 0 @grids-padding;
-	display: inline-block;
-	vertical-align: top;
+	margin: 0 @grids-margin;
+	float:left;
 }
 
 .wrapper.fluid .col {
 	padding: 0 @grids-padding;
+	margin: 0 0;
 	float:left;
 }
 
 .col {
 	text-align: @col-text-align;
+	overflow: hidden;
 }
 
 /* Section */
@@ -33,10 +40,12 @@ section {
 	overflow: hidden;
 }
 
+// Image Section
 section.image, section.video {
 	background-size: cover;
 }
 
+// Video Section
 section.video video {
 	position: absolute;
 	min-width: 100%; 
@@ -47,6 +56,26 @@ section.video video {
 	bottom: 0;
 }
 
+// Slideshow Section
+section.slideshow .slides {
+	position: absolute;
+	min-width: 100%; 
+	min-height: 100%;
+	width: auto; 
+	height: auto;
+	right: 0; 
+	bottom: 0;
+  }
+
+section.slideshow .slides img {
+	overflow: hidden;
+	width: 100%;
+	min-width: 1024px;
+	height: auto;
+	margin: 0 auto;
+  }
+
+// Overlay layer
 .bgoverlay {
 	top: 0;
 	left: 0;
@@ -56,4 +85,8 @@ section.video video {
 	padding: 0;
 	margin: 0;
 	z-index: 9;
+}
+
+.divider.modern {
+	height: 20px;
 }
