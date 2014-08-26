@@ -18,6 +18,8 @@ define( 'LIBS_DIR', THEME_DIR. '/includes' );
 define( 'LIBS_URI', THEME_URI. '/includes' );
 define( 'LANG_DIR', THEME_DIR. '/languages' );
 
+/* Class Loader */
+require_once( LIBS_DIR .'/class-loader.php' );
 
 /* Loads Theme Functions */
 require_once( LIBS_DIR .'/theme-support.php' );
